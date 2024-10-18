@@ -1,0 +1,37 @@
+.user-profile-display-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    .hov {
+      border: 1px solid sandybrown;
+      padding: 10px;
+      border-radius: 5px;
+       // Added transition for smooth scaling
+    
+      &:hover {
+        background-color: #007bff;
+        border: none;
+
+      }
+    } 
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+  
+    .profile-info {
+      .profile-item {
+        margin-bottom: 10px;
+        font-size: 16px;
+  
+        strong {
+          color: #333;
+        }
+      }
+    }
+  }

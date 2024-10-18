@@ -1,0 +1,102 @@
+@import "../css-config/mixins.scss";
+.main-header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: #7745ba;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  color: white;
+  // border-bottom: 1px solid rgba(0 , 0 , 0,  0.1);
+//   z-index: 99;
+  @include md {
+    padding: 0 40px;
+  }
+  .header-content {
+    // display: ;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 4rem;
+    max-width: 1200px;
+    // margin: 0 auto;
+    @include md {
+      height: 4rem;
+      align-items: center;
+    }
+    .left {
+      list-style-type: none;
+      display: none;
+      justify-content: space-between;
+      
+      gap: 1rem;
+      @include md {
+        display: flex;
+      }
+      li {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+    .center {
+      font-size: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      @include md {
+        font-size: 1rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      @include md {
+        gap: 1.2rem;
+      }
+      svg {
+        font-size: 1rem;
+        cursor: pointer;
+        @include md {
+          font-size: 1.5rem;
+        }
+      }
+      .cart-icon {
+        position: relative;
+        span {
+          min-width: 15px;
+          text-align: center;
+          background-color: #8e2de2;
+          border-radius: 10px;
+          position: absolute;
+          padding: 1.5px;
+          top: -10px;
+          font-size: 0.7rem;
+          line-height: 1;
+          @include md {
+            min-width: 25px;
+            padding: 2.5px;
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+  &.sticky-header {
+    position: sticky;
+    top: 0;
+    animation: stckyHeader 0.3s;
+  }
+}
+@keyframes stckyHeader {
+  0% {
+    transform: translateY(-80%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
